@@ -5,6 +5,7 @@ resource "aws_route53_record" "expense" {
   type    = "A"
   ttl     = 1
   records = [aws_instance.expense[count.index].private_ip]
+  allow_overwrite = "true"
 }
 
 resource "aws_route53_record" "public" {
@@ -13,4 +14,5 @@ resource "aws_route53_record" "public" {
   type    = "A"
   ttl     = 1
   records = [aws_instance.expense[2].public_ip]
+  allow_overwrite = "true"
 }
