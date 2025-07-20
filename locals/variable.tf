@@ -1,5 +1,5 @@
 variable "instance_type" {
-  type = "string"
+  type = string
   default = "t3.micro"
   description = "size of the ec2 instance"
 }
